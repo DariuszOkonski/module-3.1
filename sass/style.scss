@@ -1,7 +1,86 @@
-body {
-  background-color: gray;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+// VARIABLES
+$color-white: #fff;
+$color-primary: #242226;
+$color-secondary: #fed238;
+$color-text-primary: #747370;
+$color-text-secondary: #898886;
+$color-bg-primary: #f7f7f7;
+
+$width-sm: 576px;
+
+$transition: 0.2s all ease;
+
+// GENERAL
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  background-color: red;
+body {
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// NAVIGATION
+.navigation {
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $width-sm) {
+    flex-direction: column;
+  }
+
+  &__logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: $color-secondary;
+
+    @media (max-width: $width-sm) {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__items {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 1.4rem;
+    @media (max-width: $width-sm) {
+      margin-right: 0.4rem;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: $color-white;
+      text-transform: uppercase;
+      transition: $transition;
+      cursor: pointer;
+
+      @media (max-width: $width-sm) {
+        font-size: 0.6rem;
+      }
+    }
+
+    a:hover {
+      color: $color-secondary;
+    }
+  }
 }
