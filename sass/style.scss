@@ -8,6 +8,8 @@ $color-text-primary: #747370;
 $color-text-secondary: #898886;
 $color-bg-primary: #f3f3f3;
 $width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
 $transition: 0.2s all ease;
 
 // GENERAL
@@ -267,5 +269,56 @@ body {
     color: $color-text-secondary;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
+  }
+}
+
+// FOOTER
+.footer {
+  padding: 64px 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: $width-lg) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: $width-sm) {
+    flex-direction: column;
+  }
+
+  &__copyrights {
+    flex-basis: 40%;
+    font-size: 1rem;
+    font-weight: 500;
+
+    @media (max-width: $width-sm) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+  }
+  &__icon-item {
+    font-size: 2.2rem;
+    margin: 8px;
+
+    @media (max-width: $width-sm) {
+      font-size: 1.6rem;
+    }
   }
 }
