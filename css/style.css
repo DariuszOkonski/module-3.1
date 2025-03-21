@@ -56,13 +56,13 @@ body {
   color: #242226;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.2rem;
   margin-bottom: 8px;
   letter-spacing: 2px;
 }
 @media (max-width: 576px) {
   .section-header__primary-text {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .section-header__secondary-text {
@@ -150,7 +150,7 @@ body {
   color: #fff;
 }
 .header-content__secondary-text {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 2px;
   font-style: italic;
@@ -159,18 +159,18 @@ body {
 }
 @media (max-width: 576px) {
   .header-content__secondary-text {
-    font-size: 20px;
+    font-size: 1.4rem;
   }
 }
 .header-content__primary-text {
-  font-size: 64px;
+  font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
 }
 @media (max-width: 576px) {
   .header-content__primary-text {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
