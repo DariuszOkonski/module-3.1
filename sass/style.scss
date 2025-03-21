@@ -21,6 +21,7 @@ $transition: 0.2s all ease;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: $color-primary;
 }
 
 .button {
@@ -33,6 +34,7 @@ body {
   font-weight: bolder;
   font-size: 1rem;
   transition: $transition;
+  margin-bottom: 8px;
   cursor: pointer;
 
   &:hover {
@@ -45,6 +47,43 @@ body {
     font-weight: lighter;
   }
 }
+
+.section {
+  padding: 128px 0;
+  // background-color: yellow;
+}
+
+.section-header {
+  text-align: center;
+  // background-color: white;
+  margin-bottom: 36px;
+
+  &__primary-text {
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+
+    @media (max-width: $width-sm) {
+      font-size: 24px;
+    }
+  }
+
+  &__secondary-text {
+    color: $color-text-secondary;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+
+    @media (max-width: $width-sm) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// ========== SPECIFIC CLASSES ==========
 
 //HEADER
 .header {
@@ -146,6 +185,52 @@ body {
 
     @media (max-width: $width-sm) {
       font-size: 32px;
+    }
+  }
+}
+
+// SERVICES
+.services {
+  gap: 8px;
+}
+
+.service-item {
+  background-color: white;
+  text-align: center;
+  padding: 4px;
+
+  &__icon {
+    padding: 10px;
+    font-size: 2.4rem;
+    color: $color-secondary;
+    border: 3px solid $color-secondary;
+    border-radius: 50%;
+    margin-bottom: 16px;
+
+    @media (max-width: $width-sm) {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__header {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+
+    @media (max-width: $width-sm) {
+      font-size: 1rem;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: 'Times New Roman', Times, serif;
+    color: $color-text-secondary;
+
+    @media (max-width: $width-sm) {
+      font-size: 0.8rem;
+      line-height: 1.2;
     }
   }
 }
