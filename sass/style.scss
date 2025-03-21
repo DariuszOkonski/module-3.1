@@ -6,7 +6,7 @@ $color-primary: #242226;
 $color-secondary: #fed238;
 $color-text-primary: #747370;
 $color-text-secondary: #898886;
-$color-bg-primary: #f7f7f7;
+$color-bg-primary: #f3f3f3;
 $width-sm: 576px;
 $transition: 0.2s all ease;
 
@@ -51,6 +51,14 @@ body {
 .section {
   padding: 128px 0;
   // background-color: yellow;
+
+  &--bg-dark {
+    background-color: $color-bg-primary;
+  }
+
+  @media (max-width: $width-sm) {
+    padding: 64px 0;
+  }
 }
 
 .section-header {
@@ -191,7 +199,7 @@ body {
 
 // SERVICES
 .services {
-  gap: 8px;
+  // gap: 8px;
 }
 
 .service-item {
@@ -232,5 +240,32 @@ body {
       font-size: 0.8rem;
       line-height: 1.2;
     }
+  }
+}
+
+// PORTFOLIO
+.portfolio-item {
+  text-align: center;
+  background-color: $color-white;
+  padding-bottom: 24px;
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__header {
+    margin-top: 16px;
+    font-size: 1.2rem;
+  }
+
+  &__text {
+    margin-top: 4px;
+    color: $color-text-secondary;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
   }
 }
