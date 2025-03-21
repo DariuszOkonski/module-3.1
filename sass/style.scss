@@ -7,9 +7,7 @@ $color-secondary: #fed238;
 $color-text-primary: #747370;
 $color-text-secondary: #898886;
 $color-bg-primary: #f7f7f7;
-
 $width-sm: 576px;
-
 $transition: 0.2s all ease;
 
 // GENERAL
@@ -22,19 +20,50 @@ $transition: 0.2s all ease;
 }
 
 body {
-  background-color: gray;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  padding: 16px 32px;
+  border: none;
+  text-transform: uppercase;
+  color: $color-bg-primary;
+  background-color: $color-secondary;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 1rem;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-secondary, 15%);
+  }
+
+  @media (max-width: $width-sm) {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+}
+
+//HEADER
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center center;
 }
 
 // NAVIGATION
 .navigation {
-  padding: 8px;
+  padding-top: 32px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media (max-width: $width-sm) {
+    padding-top: 8px;
     flex-direction: column;
   }
 
@@ -81,6 +110,42 @@ body {
 
     a:hover {
       color: $color-secondary;
+    }
+  }
+}
+
+// HEADER-CONTENT
+.header-content {
+  min-height: 70vh;
+  // background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  color: $color-white;
+
+  &__secondary-text {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+    @media (max-width: $width-sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__primary-text {
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+
+    @media (max-width: $width-sm) {
+      font-size: 32px;
     }
   }
 }
