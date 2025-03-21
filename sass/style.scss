@@ -52,7 +52,6 @@ body {
 
 .section {
   padding: 128px 0;
-  // background-color: yellow;
 
   &--bg-dark {
     background-color: $color-bg-primary;
@@ -65,7 +64,6 @@ body {
 
 .section-header {
   text-align: center;
-  // background-color: white;
   margin-bottom: 36px;
 
   &__primary-text {
@@ -166,7 +164,6 @@ body {
 // HEADER-CONTENT
 .header-content {
   min-height: 70vh;
-  // background-color: blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,10 +197,6 @@ body {
 }
 
 // SERVICES
-.services {
-  // gap: 8px;
-}
-
 .service-item {
   background-color: white;
   text-align: center;
