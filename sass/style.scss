@@ -4,6 +4,7 @@
 $color-white: #fff;
 $color-primary: #242226;
 $color-secondary: #fed238;
+$color-secondary-hover: #f7c510;
 $color-text-primary: #747370;
 $color-text-secondary: #898886;
 $color-bg-primary: #f3f3f3;
@@ -40,7 +41,7 @@ body {
   cursor: pointer;
 
   &:hover {
-    background-color: darken($color-secondary, 15%);
+    background-color: $color-secondary-hover;
   }
 
   @media (max-width: $width-sm) {
